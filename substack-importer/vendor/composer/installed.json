@@ -1,0 +1,58 @@
+{
+    "packages": [
+        {
+            "name": "automattic/wxr-generator",
+            "version": "dev-trunk",
+            "version_normalized": "dev-trunk",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Automattic/wxr-generator.git",
+                "reference": "fd337579c9a2f58441fbaf292781cadf81881d6f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Automattic/wxr-generator/zipball/fd337579c9a2f58441fbaf292781cadf81881d6f",
+                "reference": "fd337579c9a2f58441fbaf292781cadf81881d6f",
+                "shasum": ""
+            },
+            "require-dev": {
+                "wp-phpunit/wp-phpunit": "^5",
+                "yoast/phpunit-polyfills": "^1.0"
+            },
+            "time": "2023-05-10T08:05:51+00:00",
+            "default-branch": true,
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "classmap": [
+                    "lib/"
+                ]
+            },
+            "scripts": {
+                "format": [
+                    "phpcbf --standard=phpcs.xml.dist --report-summary --report-source"
+                ],
+                "lint": [
+                    "phpcs --standard=phpcs.xml.dist --runtime-set ignore_warnings_on_exit 1"
+                ],
+                "test": [
+                    "phpunit"
+                ],
+                "test:watch": [
+                    "phpunit-watcher watch < /dev/tty"
+                ]
+            },
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "description": "A library that helps with the creation of WXR files",
+            "support": {
+                "source": "https://github.com/Automattic/wxr-generator/tree/1.0.1",
+                "issues": "https://github.com/Automattic/wxr-generator/issues"
+            },
+            "install-path": "../automattic/wxr-generator"
+        }
+    ],
+    "dev": false,
+    "dev-package-names": []
+}
